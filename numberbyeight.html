@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <table class="table">
+            <tr>
+                <td>Enter a number</td>
+                <td><input type="text" class="form-control" id="num"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="button" class="btn btn-primary" onclick="checkNumber();">CHECK</button></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><p id="result"></p></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function checkNumber(){
+            let num = parseInt(document.getElementById("num").value);
+            if(num%8==0){
+                document.getElementById("result").innerHTML = "Divisible by 8";
+            }else{
+                document.getElementById("result").innerHTML = "Not divisible by 8";
+            }
+        }
+    </script>
+</body>
+</html>
